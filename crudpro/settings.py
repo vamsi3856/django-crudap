@@ -74,12 +74,14 @@ WSGI_APPLICATION = 'crudpro.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+DATABASES = {'default': {'AUTOCOMMIT': True, 'ENGINE': 'django.db.backends.dummy', 'ATOMIC_REQUESTS': False, 'NAME': '', 'TEST_MIRROR': None, 'CONN_MAX_AGE': 0, 'TEST_NAME': None, 'TIME_ZONE': 'UTC', 'TEST_COLLATION': None, 'PORT': '', 'HOST': '', 'USER': '', 'TEST_CHARSET': None, 'PASSWORD': '', 'OPTIONS': {}}}
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 
 # Password validation
