@@ -34,7 +34,7 @@
                                   <div class="text-center">
                                     <h1 class="text-center">List of Tasks</h1>
                                     <center><div class="mt-2">
-                                        {% for task in tasks %}
+                                        {% for task in taks %}
                                         <table>
                                                 <thead>
                                                     <th>S.No</th>
@@ -48,14 +48,14 @@
                                                    
                                                    <tr>
                                                        <td>{{ forloop.counter }}</td> <td>{{ task.name }}</td> <td>{{ task.get_status_display }}</td><td> {{ task.date }}</td>
-                                                       <td><a class="btn btn-primary" href="{% url 'tasks:task_update' task.id %}">Update</a></td>
-                                                       <td><a class="btn btn-primary" href="{% url 'tasks:task_delete' task.id %}">Delete</a></td>
+                                                       <td><a class="btn btn-primary" href="{% url 'taks:task_update' task.id %}">Update</a></td>
+                                                       <td><a class="btn btn-primary" href="{% url 'taks:task_delete' task.id %}">Delete</a></td>
                                                    </tr>
                                                   
                                                 </tbody>
                                               </table>
                                               {% endfor %}
-                                              <p> <a class="btn btn-primary mt-3" href="{% url 'tasks:task_create' %}"> Add A New Task</a></p>
+                                              <p> <a class="btn btn-primary mt-3" href="{% url 'taks:task_create' %}"> Add A New Task</a></p>
                                     </div>
                                   </div>
                               </div>
