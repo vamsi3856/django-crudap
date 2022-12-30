@@ -13,7 +13,7 @@ def task_create(request):
         form = TaskForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect(reverse("tasks:task_list"))
+            return redirect(reverse("taks:task_list"))
     else:
         form = TaskForm()
 
@@ -22,8 +22,8 @@ def task_create(request):
 
 # Retrieve task list
 def task_list(request):
-    tasks = Task.objects.all()
-    return render(request, "tasks/task_list.html", { "tasks": tasks,})
+    taks = Task.objects.all()
+    return render(request, "tasks/task_list.html", { "taks": taks,})
 
 
 # Retrieve a single task
@@ -39,7 +39,7 @@ def task_update(request, pk):
         form = TaskForm(instance=task_obj, data=request.POST)
         if form.is_valid():
             form.save()
-            return redirect(reverse("tasks:task_detail", args=[pk,]))
+            return redirect(reverse("taks:task_detail", args=[pk,]))
     else:
         form = TaskForm(instance=task_obj)
 
@@ -50,4 +50,4 @@ def task_update(request, pk):
 def task_delete(request, pk):
     task_obj = get_object_or_404(Task, pk=pk)
     task_obj.delete()
-    return redirect(reverse("tasks:task_list"))
+    return redirect(reverse("taks:task_list"))
