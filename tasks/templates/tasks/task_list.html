@@ -34,7 +34,7 @@
                                   <div class="text-center">
                                     <h1 class="text-center">List of Tasks</h1>
                                     <center><div class="mt-2">
-                                        {% for task in taks %}
+                                        {% for tak in taks %}
                                         <table>
                                                 <thead>
                                                     <th>S.No</th>
@@ -47,9 +47,9 @@
                                                 <tbody>
                                                    
                                                    <tr>
-                                                       <td>{{ forloop.counter }}</td> <td>{{ task.name }}</td> <td>{{ task.get_status_display }}</td><td> {{ task.date }}</td>
-                                                       <td><a class="btn btn-primary" href="{% url 'taks:task_update' task.id %}">Update</a></td>
-                                                       <td><a class="btn btn-primary" href="{% url 'taks:task_delete' task.id %}">Delete</a></td>
+                                                       <td>{{ forloop.counter }}</td> <td>{{ tak.name }}</td> <td>{{ tak.get_status_display }}</td><td> {{ tak.date }}</td>
+                                                       <td><a class="btn btn-primary" href="{% url 'taks:task_update' tak.id %}">Update</a></td>
+                                                       <td><a class="btn btn-primary" href="{% url 'taks:task_delete' tak.id %}">Delete</a></td>
                                                    </tr>
                                                   
                                                 </tbody>
