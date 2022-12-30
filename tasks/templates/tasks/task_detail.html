@@ -44,11 +44,11 @@
                                             <tr>
                                                 <td> {{ task.name }}</td>
                                                 <td>{{ task.get_status_display }}</td>
-                                                <td><a class="btn btn-primary" href="{% url 'tasks:task_update' task.id %}">Update</a></td>
-                                                <td><a class="btn btn-primary" href="{% url 'tasks:task_delete' task.id %}">Delete</a></td>
+                                                <td><a class="btn btn-primary" href="{% url 'taks:task_update' task.id %}">Update</a></td>
+                                                <td><a class="btn btn-primary" href="{% url 'taks:task_delete' task.id %}">Delete</a></td>
                                         </table>
-                                         <a class="btn btn-primary mt-3" href="{% url 'tasks:task_list' %}">View All Tasks</a>
-                                            <a class="btn btn-primary mt-3" href="{% url 'tasks:task_create'%}">New Task</a>
+                                         <a class="btn btn-primary mt-3" href="{% url 'taks:task_list' %}">View All Tasks</a>
+                                            <a class="btn btn-primary mt-3" href="{% url 'taks:task_create'%}">New Task</a>
                                         
                                     </div>
                                   </div>
