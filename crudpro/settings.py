@@ -74,28 +74,7 @@ WSGI_APPLICATION = 'crudpro.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-#DATABASES = {'default': {'AUTOCOMMIT': True, 'ENGINE': 'django.db.backends.dummy', 'ATOMIC_REQUESTS': False, 'NAME': '', 'TEST_MIRROR': None, 'CONN_MAX_AGE': 0, 'TEST_NAME': None, 'TIME_ZONE': 'UTC', 'TEST_COLLATION': None, 'PORT': '', 'HOST': '', 'USER': '', 'TEST_CHARSET': None, 'PASSWORD': '', 'OPTIONS': {}}}
-DATABASES = {'default': {'ATOMIC_REQUESTS': False,
-             'AUTOCOMMIT': True,
-             'CONN_MAX_AGE': 0,
-             'ENGINE': 'django.db.backends.dummy',
-             'HOST': '',
-             'NAME': '',
-             'OPTIONS': {},
-             'PASSWORD': '********************',
-             'PORT': '',
-             'TEST': {'CHARSET': None,
-                      'COLLATION': None,
-                      'MIGRATE': True,
-                      'MIRROR': None,
-                      'NAME': None},
-             'TEST_CHARSET': None,
-             'TEST_COLLATION': None,
-             'TEST_MIRROR': None,
-             'TEST_NAME': None,
-             'TIME_ZONE': 'UTC',
-             'USER': ''}}
-
+DATABASES = {'default': {'AUTOCOMMIT': True, 'ENGINE': 'django.db.backends.dummy', 'ATOMIC_REQUESTS': False, 'NAME': '', 'TEST_MIRROR': None, 'CONN_MAX_AGE': 0, 'TEST_NAME': None, 'TIME_ZONE': 'UTC', 'TEST_COLLATION': None, 'PORT': '', 'HOST': '', 'USER': '', 'TEST_CHARSET': None, 'PASSWORD': '', 'OPTIONS': {}}}
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
